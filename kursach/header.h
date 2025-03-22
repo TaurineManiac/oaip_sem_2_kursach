@@ -6,6 +6,10 @@
 
 using namespace std;
 
+// Объявления вспомогательных функций
+extern bool isLeapYear(int year);
+extern int getDaysInMonth(int month, int year);
+
 class Deposit {
 private:
     string surname;
@@ -66,32 +70,43 @@ private:
     int depositsCount;
     int depositsCapacity;
 
-    void loadDeposits();
-    void saveDeposits();
+public:
+    BankSystem();
+    ~BankSystem();
+
+    // Методы управления пользователями
     bool logIn();
     void registerUser();
     bool isUsernameTaken(string login);
+    void deleteUser();
+    void loadUsers();
+    void saveUsers();
+
+    // Методы управления вкладами
+    void loadDeposits();
+    void saveDeposits();
     void showDeposits();
     void addDeposit();
     void editDeposit();
     void deleteDeposit();
+
+    // Методы поиска и фильтрации
     void searchBySurname();
     void searchByID();
     void searchByAmount();
     void searchByDate();
     void filterByAmount();
+    void showNewThisMonth();
+
+    // Методы сортировки
     void sortBySurname();
     void sortByID();
     void sortByAmount();
     void sortByDate();
-    void showNewThisMonth();
-    void deleteUser();
+
+    // Методы меню
     void adminMenu();
     void userMenu();
-
-public:
-    BankSystem();
-    ~BankSystem();
     void start();
 };
 
