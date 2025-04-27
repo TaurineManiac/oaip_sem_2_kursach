@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach
+# Install script for directory: C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/kursach")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/kursach_1")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

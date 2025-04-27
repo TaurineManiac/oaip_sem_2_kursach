@@ -3,145 +3,274 @@
 #include <fstream>
 #include <limits>
 #include <cctype>
-#include "header.h" // Оставляем только этот заголовок
+#include "header.h"
 
 using namespace std;
 
 // Меню администратора
 void BankSystem::adminMenu() {
-    string choice;
     while (true) {
         cout << "\nМеню администратора:\n";
         cout << "1. Добавить вклад\n";
         cout << "2. Редактировать вклад\n";
         cout << "3. Удалить вклад\n";
         cout << "4. Показать все вклады\n";
-        cout << "5. Поиск по фамилии\n";
-        cout << "6. Поиск по ID\n";
-        cout << "7. Поиск по сумме\n";
-        cout << "8. Поиск по дате\n";
-        cout << "9. Фильтровать по сумме\n";
-        cout << "10. Сортировать по фамилии\n";
-        cout << "11. Сортировать по ID\n";
-        cout << "12. Сортировать по сумме\n";
-        cout << "13. Сортировать по дате\n";
-        cout << "14. Показать новые вклады за месяц\n";
-        cout << "15. Удалить пользователя\n";
-        cout << "16. Зарегистрировать нового пользователя\n";
+        cout << "5. Поиск\n";
+        cout << "6. Фильтровать\n";
+        cout << "7. Сортировать\n";
+        cout << "8. Показать новые вклады за месяц\n";
+        cout << "9. Удалить пользователя\n";
+        cout << "10. Зарегистрировать нового пользователя\n";
         cout << "0. Выход\n";
-        cout << "Выберите действие: ";
-
-        getline(cin, choice);
-
-        if (choice == "0") {
+        int choice = mylib::checkTryToInputInt();
+        while (choice < 0 || choice > 10) {
+            cout << "Введите число в нужном диапазоне.\n";
+            choice = mylib::checkTryToInputInt();
+        }
+        if (choice == 0) {
             break;
-        } else if (choice == "1") {
+        } else if (choice == 1) {
             addDeposit();
-        } else if (choice == "2") {
+        } else if (choice == 2) {
             editDeposit();
-        } else if (choice == "3") {
+        } else if (choice == 3) {
             deleteDeposit();
-        } else if (choice == "4") {
+        } else if (choice == 4) {
             showDeposits();
-        } else if (choice == "5") {
-            searchBySurname();
-        } else if (choice == "6") {
-            searchByID();
-        } else if (choice == "7") {
-            searchByAmount();
-        } else if (choice == "8") {
-            searchByDate();
-        } else if (choice == "9") {
-            filterByAmount();
-        } else if (choice == "10") {
-            sortBySurname();
-        } else if (choice == "11") {
-            sortByID();
-        } else if (choice == "12") {
-            sortByAmount();
-        } else if (choice == "13") {
-            sortByDate();
-        } else if (choice == "14") {
+        } else if (choice == 5) {
+            subAdminSearchMenu();
+        } else if (choice == 6) {
+            subAdminFilterMenu();
+        } else if (choice == 7) {
+            subAdminSortMenu();
+        } else if (choice == 8) {
             showNewThisMonth();
-        } else if (choice == "15") {
+        } else if (choice == 9) {
             deleteUser();
-        } else if (choice == "16") {
+        } else if (choice == 10) {
             registerUser();
-        } else {
-            cout << "Неверный выбор. Попробуйте снова.\n";
+        }
+    }
+}
+
+// Подменю поиска для администратора
+void BankSystem::subAdminSearchMenu() {
+    while (true) {
+        cout << "\nПоиск:\n";
+        cout << "1. Поиск по фамилии\n";
+        cout << "2. Поиск по ID\n";
+        cout << "3. Поиск по сумме\n";
+        cout << "4. Поиск по дате\n";
+        cout << "0. Выход\n";
+        int choice = mylib::checkTryToInputInt();
+        while (choice < 0 || choice > 4) {
+            cout << "Введите число в нужном диапазоне.\n";
+            choice = mylib::checkTryToInputInt();
+        }
+        if (choice == 0) {
+            break;
+        } else if (choice == 1) {
+            searchBySurname();
+        } else if (choice == 2) {
+            searchByID();
+        } else if (choice == 3) {
+            searchByAmount();
+        } else if (choice == 4) {
+            searchByDate();
+        }
+    }
+}
+
+// Подменю фильтрации для администратора
+void BankSystem::subAdminFilterMenu() {
+    while (true) {
+        cout << "\nФильтрация:\n";
+        cout << "1. Фильтровать по сумме\n"
+                "2. Фильтровать по дате\n";
+        cout << "0. Выход\n";
+        int choice = mylib::checkTryToInputInt();
+        while (choice < 0 || choice > 2) {
+            cout << "Введите число в нужном диапазоне.\n";
+            choice = mylib::checkTryToInputInt();
+        }
+        if (choice == 0) {
+            break;
+        } else if (choice == 1) {
+            filterByAmount();
+        }
+        else if (choice == 2) {
+            filterByDate();
+        }
+    }
+}
+
+// Подменю сортировки для администратора
+void BankSystem::subAdminSortMenu() {
+    while (true) {
+        cout << "\nСортировка:\n";
+        cout << "1. Сортировать по фамилии\n";
+        cout << "2. Сортировать по ID\n";
+        cout << "3. Сортировать по сумме\n";
+        cout << "4. Сортировать по дате\n";
+        cout << "0. Выход\n";
+        int choice = mylib::checkTryToInputInt();
+        while (choice < 0 || choice > 4) {
+            cout << "Введите число в нужном диапазоне.\n";
+            choice = mylib::checkTryToInputInt();
+        }
+        if (choice == 0) {
+            break;
+        } else if (choice == 1) {
+            sortBySurname();
+        } else if (choice == 2) {
+            sortByID();
+        } else if (choice == 3) {
+            sortByAmount();
+        } else if (choice == 4) {
+            sortByDate();
         }
     }
 }
 
 // Меню пользователя
 void BankSystem::userMenu() {
-    string choice;
     while (true) {
         cout << "\nМеню пользователя:\n";
         cout << "1. Добавить вклад\n";
         cout << "2. Редактировать вклад\n";
         cout << "3. Удалить вклад\n";
         cout << "4. Показать мои вклады\n";
-        cout << "5. Поиск по ID\n";
-        cout << "6. Поиск по сумме\n";
-        cout << "7. Поиск по дате\n";
-        cout << "8. Фильтровать по сумме\n";
-        cout << "9. Сортировать по ID\n";
-        cout << "10. Сортировать по сумме\n";
-        cout << "11. Сортировать по дате\n";
-        cout << "12. Показать новые вклады за последний месяц\n";
+        cout << "5. Поиск\n";
+        cout << "6. Фильтровать\n";
+        cout << "7. Сортировать\n";
+        cout << "8. Показать новые вклады за последний месяц\n";
         cout << "0. Выход\n";
-        cout << "Выберите действие: ";
-
-        getline(cin, choice);
-
-        if (choice == "0") {
+        int choice = mylib::checkTryToInputInt();
+        while (choice < 0 || choice > 8) {
+            cout << "Введите число в нужном диапазоне.\n";
+            choice = mylib::checkTryToInputInt();
+        }
+        if (choice == 0) {
             break;
-        } else if (choice == "1") {
+        } else if (choice == 1) {
             addDeposit();
-        } else if (choice == "2") {
+        } else if (choice == 2) {
             editDeposit();
-        } else if (choice == "3") {
+        } else if (choice == 3) {
             deleteDeposit();
-        } else if (choice == "4") {
+        } else if (choice == 4) {
             showDeposits();
-        } else if (choice == "5") {
-            searchByID();
-        } else if (choice == "6") {
-            searchByAmount();
-        } else if (choice == "7") {
-            searchByDate();
-        } else if (choice == "8") {
-            filterByAmount();
-        } else if (choice == "9") {
-            sortByID();
-        } else if (choice == "10") {
-            sortByAmount();
-        } else if (choice == "11") {
-            sortByDate();
-        } else if (choice == "12") {
+        } else if (choice == 5) {
+            subUserSearchMenu();
+        } else if (choice == 6) {
+            subUserFilterMenu();
+        } else if (choice == 7) {
+            subUserSortMenu();
+        } else if (choice == 8) {
             showNewThisMonth();
-        } else {
-            cout << "Неверный выбор. Попробуйте снова.\n";
+        }
+    }
+}
+
+// Подменю поиска для пользователя
+void BankSystem::subUserSearchMenu() {
+    while (true) {
+        cout << "\nПоиск:\n";
+        cout << "1. Поиск по ID\n";
+        cout << "2. Поиск по сумме\n";
+        cout << "3. Поиск по дате\n";
+        cout << "0. Выход\n";
+        int choice = mylib::checkTryToInputInt();
+        while (choice < 0 || choice > 3) {
+            cout << "Введите число в нужном диапазоне.\n";
+            choice = mylib::checkTryToInputInt();
+        }
+        if (choice == 0) {
+            break;
+        } else if (choice == 1) {
+            searchByID();
+        } else if (choice == 2) {
+            searchByAmount();
+        } else if (choice == 3) {
+            searchByDate();
+        }
+    }
+}
+
+// Подменю фильтрации для пользователя
+void BankSystem::subUserFilterMenu() {
+    while (true) {
+        cout << "\nФильтрация:\n";
+        cout << "1. Фильтровать по сумме\n"
+                "2. Фильтровать по дате\n";
+        cout << "0. Выход\n";
+        int choice = mylib::checkTryToInputInt();
+        while (choice < 0 || choice > 2) {
+            cout << "Введите число в нужном диапазоне.\n";
+            choice = mylib::checkTryToInputInt();
+        }
+        if (choice == 0) {
+            break;
+        } else if (choice == 1) {
+            filterByAmount();
+        }
+        else if (choice == 2) {
+            filterByDate();
+        }
+    }
+}
+
+// Подменю сортировки для пользователя
+void BankSystem::subUserSortMenu() {
+    while (true) {
+        cout << "\nСортировка:\n";
+        cout << "1. Сортировать по ID\n";
+        cout << "2. Сортировать по сумме\n";
+        cout << "3. Сортировать по дате\n";
+        cout << "0. Выход\n";
+        int choice = mylib::checkTryToInputInt();
+        while (choice < 0 || choice > 3) {
+            cout << "Введите число в нужном диапазоне.\n";
+            choice = mylib::checkTryToInputInt();
+        }
+        if (choice == 0) {
+            break;
+        } else if (choice == 1) {
+            sortByID();
+        } else if (choice == 2) {
+            sortByAmount();
+        } else if (choice == 3) {
+            sortByDate();
         }
     }
 }
 
 // Запуск программы
 void BankSystem::start() {
-    string choice;
     while (true) {
+
         cout << "\nБанковская система\n";
         cout << "1. Войти\n";
         cout << "2. Зарегистрироваться\n";
         cout << "0. Выход\n";
-        cout << "Выберите действие: ";
-
-        getline(cin, choice);
-
-        if (choice == "0") {
+        int choice = mylib::checkTryToInputInt();
+        while (choice < 0 || choice > 2) {
+            cout << "Введите число в нужном диапазоне.\n";
+            choice = mylib::checkTryToInputInt();
+        }
+        if (choice == 0) {
+            std::cout << " /_/\\ /_/\\  \n"
+                 " /  ^.^  \\   bye~ *paw*\n"
+                 "/   >w<   \\ \n"
+                 "/ /  ___  \\ \\ \n"
+                 "| | /   \\ | | \n"
+                 "| |/     \\| | \n"
+                 " \\_\\_______/_/ \n"
+                 "      /\\ \n"
+                 "     /  \\ \n"
+                 "    /    \\ \n";
             break;
-        } else if (choice == "1") {
+        } else if (choice == 1) {
             if (logIn()) {
                 if (currentUser->isAdmin()) {
                     adminMenu();
@@ -149,10 +278,8 @@ void BankSystem::start() {
                     userMenu();
                 }
             }
-        } else if (choice == "2") {
+        } else if (choice == 2) {
             registerUser();
-        } else {
-            cout << "Неверный выбор. Попробуйте снова.\n";
         }
     }
 }

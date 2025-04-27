@@ -4,7 +4,7 @@
 #include <limits>
 #include <cctype>
 #include <stdexcept>
-#include "header.h" // Оставляем только этот заголовок
+#include "header.h"
 
 using namespace std;
 
@@ -16,35 +16,21 @@ void BankSystem::loadUsers() {
         return;
     }
 
-    // Очищаем текущий массив пользователей (кроме администратора, который создаётся в конструкторе)
-    for (int i = 1; i < countUsers; i++) { // Начинаем с 1, чтобы не удалять администратора
+    for (int i = 1; i < countUsers; i++) {
         delete users[i];
         users[i] = nullptr;
     }
-    countUsers = 1; // Оставляем только администратора (он уже создан в конструкторе)
+    countUsers = 1;
 
     string username, password, surname, name;
     int isAdmin;
     while (file >> username >> password >> surname >> name >> isAdmin) {
         if (username == "admin") {
-            continue; // Пропускаем администратора, так как он уже создан в конструкторе
+            continue;
         }
 
         if (countUsers == userCapacity) {
-            userCapacity += 2;
-            User** temp = new User*[userCapacity];
-            if (!temp) {
-                file.close();
-                throw runtime_error("Ошибка выделения памяти при расширении массива пользователей в loadUsers");
-            }
-            for (int i = 0; i < countUsers; i++) {
-                temp[i] = users[i];
-            }
-            for (int i = countUsers; i < userCapacity; i++) {
-                temp[i] = nullptr;
-            }
-            delete[] users;
-            users = temp;
+            users = expandUsers(users, userCapacity);
         }
 
         if (isAdmin == 1) {
@@ -81,53 +67,10 @@ void BankSystem::saveUsers() {
 
 // Авторизация пользователя
 bool BankSystem::logIn() {
-    cout << "Введите логин и пароль" << endl;
-    string login, pass;
-    string input;
-
-    while (true) {
-        bool proverkaLogIn = false;
-        cout << "Введите логин (без пробелов): ";
-        getline(cin, input);
-        if (input.empty()) {
-            cout << "Поле не может быть пустым. Попробуйте снова." << endl;
-            continue;
-        }
-        for (int i = 0; i < input.size(); i++) {
-            if (isspace(input[i])) {
-                proverkaLogIn = true;
-                break;
-            }
-        }
-        if (proverkaLogIn) {
-            cout << "Строка содержит пробелы. Попробуйте снова." << endl;
-            continue;
-        }
-        break;
-    }
-    login = input;
-
-    while (true) {
-        bool proverkaLogIn = false;
-        cout << "Введите пароль (без пробелов): ";
-        getline(cin, input);
-        if (input.empty()) {
-            cout << "Поле не может быть пустым. Попробуйте снова." << endl;
-            continue;
-        }
-        for (int i = 0; i < input.size(); i++) {
-            if (isspace(input[i])) {
-                proverkaLogIn = true;
-                break;
-            }
-        }
-        if (proverkaLogIn) {
-            cout << "Строка содержит пробелы. Попробуйте снова." << endl;
-            continue;
-        }
-        break;
-    }
-    pass = input;
+    cout << "Введите логин: ";
+    string login = mylib::checkTryToInputString(false); // Только латиница
+    cout << "Введите пароль: ";
+    string pass = mylib::checkTryToInputString(false); // Только латиница
 
     for (int i = 0; i < countUsers; i++) {
         if (users[i]->getUsername() == login && users[i]->getPassword() == pass) {
@@ -143,139 +86,29 @@ bool BankSystem::logIn() {
 // Регистрация нового пользователя
 void BankSystem::registerUser() {
     cout << "Для регистрации введите логин, пароль, имя и фамилию" << endl;
-    string login, pass, name, surname;
-    string input;
 
-    // Ввод логина
+    string login;
+    cout << "Введите логин: ";
     while (true) {
-        bool proverkaLogIn = false;
-        cout << "Введите логин (без пробелов): ";
-        getline(cin, input);
-        if (input.empty()) {
-            cout << "Поле не может быть пустым. Попробуйте снова." << endl;
-            continue;
-        }
-        for (int i = 0; i < input.size(); i++) {
-            if (isspace(input[i])) {
-                proverkaLogIn = true;
-                break;
-            }
-        }
-        if (proverkaLogIn) {
-            cout << "Строка содержит пробелы. Попробуйте снова." << endl;
-            continue;
-        }
-        if (isUsernameTaken(input)) {
+        login = mylib::checkTryToInputString(false); // Только латиница
+        if (isUsernameTaken(login)) {
             cout << "Данное имя пользователя уже занято. Попробуйте другое." << endl;
             continue;
         }
         break;
     }
-    login = input;
 
-    // Ввод пароля
-    while (true) {
-        bool proverkaLogIn = false;
-        cout << "Введите пароль (без пробелов): ";
-        getline(cin, input);
-        if (input.empty()) {
-            cout << "Поле не может быть пустым. Попробуйте снова." << endl;
-            continue;
-        }
-        for (int i = 0; i < input.size(); i++) {
-            if (isspace(input[i])) {
-                proverkaLogIn = true;
-                break;
-            }
-        }
-        if (proverkaLogIn) {
-            cout << "Строка содержит пробелы. Попробуйте снова." << endl;
-            continue;
-        }
-        break;
-    }
-    pass = input;
+    cout << "Введите пароль: ";
+    string pass = mylib::checkTryToInputString(false); // Только латиница
 
-    // Ввод имени
-    while (true) {
-        bool provrkaIsAlpha = false;
-        int counterLetter = 0;
-        cout << "Введите имя: ";
-        getline(cin, input);
-        if (input.empty()) {
-            cout << "Поле не может быть пустым. Попробуйте снова." << endl;
-            continue;
-        }
-        for (int i = 0; i < input.size(); i++) {
-            if (isspace(input[i])) {
-                provrkaIsAlpha = false;
-                break;
-            }
-            if (isalpha(input[i]) || input[i] == '-') {
-                provrkaIsAlpha = true;
-                if (isalpha(input[i])) {
-                    counterLetter++;
-                }
-            } else {
-                provrkaIsAlpha = false;
-                break;
-            }
-        }
-        if (!provrkaIsAlpha || counterLetter == 0) {
-            cout << "Имя должно содержать только буквы (и возможный дефис) и не быть пустым." << endl;
-            continue;
-        }
-        name = input;
-        break;
-    }
+    cout << "Введите имя: ";
+    string name = mylib::checkTryToInputString(true); // Разрешаем кириллицу
 
-    // Ввод фамилии
-    while (true) {
-        bool provrkaIsAlpha = false;
-        int counterLetter = 0;
-        cout << "Введите фамилию: ";
-        getline(cin, input);
-        if (input.empty()) {
-            cout << "Поле не может быть пустым. Попробуйте снова." << endl;
-            continue;
-        }
-        for (int i = 0; i < input.size(); i++) {
-            if (isspace(input[i])) {
-                provrkaIsAlpha = false;
-                break;
-            }
-            if (isalpha(input[i]) || input[i] == '-') {
-                provrkaIsAlpha = true;
-                if (isalpha(input[i])) {
-                    counterLetter++;
-                }
-            } else {
-                provrkaIsAlpha = false;
-                break;
-            }
-        }
-        if (!provrkaIsAlpha || counterLetter == 0) {
-            cout << "Фамилия должна содержать только буквы (и возможный дефис) и не быть пустой." << endl;
-            continue;
-        }
-        surname = input;
-        break;
-    }
+    cout << "Введите фамилию: ";
+    string surname = mylib::checkTryToInputString(true); // Разрешаем кириллицу
 
     if (countUsers == userCapacity) {
-        userCapacity += 2;
-        User** temp = new User*[userCapacity];
-        if (!temp) {
-            throw runtime_error("Ошибка выделения памяти при расширении массива пользователей");
-        }
-        for (int i = 0; i < countUsers; i++) {
-            temp[i] = users[i];
-        }
-        for (int i = countUsers; i < userCapacity; i++) {
-            temp[i] = nullptr;
-        }
-        delete[] users;
-        users = temp;
+        users = expandUsers(users, userCapacity);
     }
 
     users[countUsers] = new RegularUser(login, pass, surname, name);
@@ -285,7 +118,6 @@ void BankSystem::registerUser() {
     countUsers++;
     cout << "Пользователь зарегистрирован!\n";
 
-    // Сохраняем пользователей в файл
     saveUsers();
 }
 
@@ -311,10 +143,8 @@ void BankSystem::deleteUser() {
         return;
     }
 
-    string username;
-
     cout << "Введите логин пользователя для удаления: ";
-    getline(cin, username);
+    string username = mylib::checkTryToInputString(false); // Только латиница
 
     if (username == "admin") {
         cout << "Нельзя удалить администратора!\n";
@@ -355,6 +185,6 @@ void BankSystem::deleteUser() {
     countUsers--;
 
     saveDeposits();
-    saveUsers(); // Сохраняем пользователей после удаления
+    saveUsers();
     cout << "Пользователь и его вклады удалены.\n";
 }

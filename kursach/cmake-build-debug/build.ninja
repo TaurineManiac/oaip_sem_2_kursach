@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: kursach
+# Project: kursach_1
 # Configurations: Debug
 # =============================================================================
 
@@ -39,52 +39,103 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach_1/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target kursach
+# Object build statements for EXECUTABLE target kursach_1
 
 
 #############################################
-# Order-only phony target for kursach
+# Order-only phony target for kursach_1
 
-build cmake_object_order_depends_target_kursach: phony || .
+build cmake_object_order_depends_target_kursach_1: phony || .
 
-build CMakeFiles/kursach.dir/main.cpp.obj: CXX_COMPILER__kursach_unscanned_Debug C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach/main.cpp || cmake_object_order_depends_target_kursach
-  DEP_FILE = CMakeFiles\kursach.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\kursach.dir
-  OBJECT_FILE_DIR = CMakeFiles\kursach.dir
+build CMakeFiles/kursach_1.dir/main.cpp.obj: CXX_COMPILER__kursach_1_unscanned_Debug C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach_1/main.cpp || cmake_object_order_depends_target_kursach_1
+  DEP_FILE = CMakeFiles\kursach_1.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1"
+  OBJECT_DIR = CMakeFiles\kursach_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\kursach_1.dir
 
-build CMakeFiles/kursach.dir/functions.cpp.obj: CXX_COMPILER__kursach_unscanned_Debug C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach/functions.cpp || cmake_object_order_depends_target_kursach
-  DEP_FILE = CMakeFiles\kursach.dir\functions.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\kursach.dir
-  OBJECT_FILE_DIR = CMakeFiles\kursach.dir
+build CMakeFiles/kursach_1.dir/functions.cpp.obj: CXX_COMPILER__kursach_1_unscanned_Debug C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach_1/functions.cpp || cmake_object_order_depends_target_kursach_1
+  DEP_FILE = CMakeFiles\kursach_1.dir\functions.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1"
+  OBJECT_DIR = CMakeFiles\kursach_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\kursach_1.dir
+
+build CMakeFiles/kursach_1.dir/deposit_management.cpp.obj: CXX_COMPILER__kursach_1_unscanned_Debug C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach_1/deposit_management.cpp || cmake_object_order_depends_target_kursach_1
+  DEP_FILE = CMakeFiles\kursach_1.dir\deposit_management.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1"
+  OBJECT_DIR = CMakeFiles\kursach_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\kursach_1.dir
+
+build CMakeFiles/kursach_1.dir/menu.cpp.obj: CXX_COMPILER__kursach_1_unscanned_Debug C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach_1/menu.cpp || cmake_object_order_depends_target_kursach_1
+  DEP_FILE = CMakeFiles\kursach_1.dir\menu.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1"
+  OBJECT_DIR = CMakeFiles\kursach_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\kursach_1.dir
+
+build CMakeFiles/kursach_1.dir/search_filter.cpp.obj: CXX_COMPILER__kursach_1_unscanned_Debug C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach_1/search_filter.cpp || cmake_object_order_depends_target_kursach_1
+  DEP_FILE = CMakeFiles\kursach_1.dir\search_filter.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1"
+  OBJECT_DIR = CMakeFiles\kursach_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\kursach_1.dir
+
+build CMakeFiles/kursach_1.dir/sorting.cpp.obj: CXX_COMPILER__kursach_1_unscanned_Debug C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach_1/sorting.cpp || cmake_object_order_depends_target_kursach_1
+  DEP_FILE = CMakeFiles\kursach_1.dir\sorting.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1"
+  OBJECT_DIR = CMakeFiles\kursach_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\kursach_1.dir
+
+build CMakeFiles/kursach_1.dir/user_management.cpp.obj: CXX_COMPILER__kursach_1_unscanned_Debug C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach_1/user_management.cpp || cmake_object_order_depends_target_kursach_1
+  DEP_FILE = CMakeFiles\kursach_1.dir\user_management.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1"
+  OBJECT_DIR = CMakeFiles\kursach_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\kursach_1.dir
+
+build CMakeFiles/kursach_1.dir/arrayExpansion.cpp.obj: CXX_COMPILER__kursach_1_unscanned_Debug C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach_1/arrayExpansion.cpp || cmake_object_order_depends_target_kursach_1
+  DEP_FILE = CMakeFiles\kursach_1.dir\arrayExpansion.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1"
+  OBJECT_DIR = CMakeFiles\kursach_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\kursach_1.dir
+
+build CMakeFiles/kursach_1.dir/isOtherUser.cpp.obj: CXX_COMPILER__kursach_1_unscanned_Debug C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach_1/isOtherUser.cpp || cmake_object_order_depends_target_kursach_1
+  DEP_FILE = CMakeFiles\kursach_1.dir\isOtherUser.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1"
+  OBJECT_DIR = CMakeFiles\kursach_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\kursach_1.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target kursach
+# Link build statements for EXECUTABLE target kursach_1
 
 
 #############################################
-# Link the executable kursach.exe
+# Link the executable kursach_1.exe
 
-build kursach.exe: CXX_EXECUTABLE_LINKER__kursach_Debug CMakeFiles/kursach.dir/main.cpp.obj CMakeFiles/kursach.dir/functions.cpp.obj
+build kursach_1.exe: CXX_EXECUTABLE_LINKER__kursach_1_Debug CMakeFiles/kursach_1.dir/main.cpp.obj CMakeFiles/kursach_1.dir/functions.cpp.obj CMakeFiles/kursach_1.dir/deposit_management.cpp.obj CMakeFiles/kursach_1.dir/menu.cpp.obj CMakeFiles/kursach_1.dir/search_filter.cpp.obj CMakeFiles/kursach_1.dir/sorting.cpp.obj CMakeFiles/kursach_1.dir/user_management.cpp.obj CMakeFiles/kursach_1.dir/arrayExpansion.cpp.obj CMakeFiles/kursach_1.dir/isOtherUser.cpp.obj | libinputCheck.dll.a libmegagenerate.dll.a
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\kursach.dir
+  LINK_LIBRARIES = libinputCheck.dll.a  libmegagenerate.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\kursach_1.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = kursach.exe
-  TARGET_IMPLIB = libkursach.dll.a
-  TARGET_PDB = kursach.exe.dbg
+  TARGET_FILE = kursach_1.exe
+  TARGET_IMPLIB = libkursach_1.dll.a
+  TARGET_PDB = kursach_1.exe.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D "C:\Users\Ignat\Desktop\Шестопалов Игнат Романович\ОАиП\kursach\cmake-build-debug" && E:\getbr\JetBrains\CLion2024.3\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D "C:\Users\Ignat\Desktop\Шестопалов Игнат Романович\ОАиП\kursach_1\cmake-build-debug" && E:\getbr\JetBrains\CLion2024.3\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -95,7 +146,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D "C:\Users\Ignat\Desktop\Шестопалов Игнат Романович\ОАиП\kursach\cmake-build-debug" && E:\getbr\JetBrains\CLion2024.3\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S"C:\Users\Ignat\Desktop\Шестопалов Игнат Романович\ОАиП\kursach" -B"C:\Users\Ignat\Desktop\Шестопалов Игнат Романович\ОАиП\kursach\cmake-build-debug""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D "C:\Users\Ignat\Desktop\Шестопалов Игнат Романович\ОАиП\kursach_1\cmake-build-debug" && E:\getbr\JetBrains\CLion2024.3\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S"C:\Users\Ignat\Desktop\Шестопалов Игнат Романович\ОАиП\kursach_1" -B"C:\Users\Ignat\Desktop\Шестопалов Игнат Романович\ОАиП\kursach_1\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -105,7 +156,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build kursach: phony kursach.exe
+build kursach_1: phony kursach_1.exe
 
 # =============================================================================
 # Folder targets.
@@ -113,9 +164,9 @@ build kursach: phony kursach.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach/cmake-build-debug
+# Folder: C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1/cmake-build-debug
 
-build all: phony kursach.exe
+build all: phony kursach_1.exe
 
 # =============================================================================
 # Built-in targets
@@ -124,14 +175,14 @@ build all: phony kursach.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach_1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake: phony
+build C$:/Users/Ignat/Desktop/Шестопалов$ Игнат$ Романович/ОАиП/kursach_1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake E$:/getbr/JetBrains/CLion2024.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################

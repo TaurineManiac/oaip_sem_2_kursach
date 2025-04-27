@@ -1,4 +1,4 @@
-E:\getbr\JetBrains\CLion2024.3\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=E:/getbr/JetBrains/CLion2024.3/bin/ninja/win/x64/ninja.exe -G Ninja -S "C:\Users\Ignat\Desktop\Шестопалов Игнат Романович\ОАиП\kursach" -B "C:\Users\Ignat\Desktop\Шестопалов Игнат Романович\ОАиП\kursach\cmake-build-debug"
--- Configuring done (0.2s)
--- Generating done (0.0s)
--- Build files have been written to: C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach/cmake-build-debug
+E:\getbr\JetBrains\CLion2024.3\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=E:/getbr/JetBrains/CLion2024.3/bin/ninja/win/x64/ninja.exe -G Ninja -S "C:\Users\Ignat\Desktop\Шестопалов Игнат Романович\ОАиП\kursach_1" -B "C:\Users\Ignat\Desktop\Шестопалов Игнат Романович\ОАиП\kursach_1\cmake-build-debug"
+-- Configuring done (0.8s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/Ignat/Desktop/Шестопалов Игнат Романович/ОАиП/kursach_1/cmake-build-debug

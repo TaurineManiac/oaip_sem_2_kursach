@@ -74,7 +74,7 @@ bool RegularUser::isAdmin() const {
 RegularUser::RegularUser(string u, string p, string s, string n) : User(u, p, s, n) {}
 
 // Конструктор класса Deposit
-Deposit::Deposit(string s, string n, float a, int d, int m, int y, int id) {
+Deposit::Deposit(string s, string n, double a, int d, int m, int y, int id) {
     surname = s;
     name = n;
     amount = a;
@@ -93,7 +93,7 @@ string Deposit::getName() const {
     return name;
 }
 
-float Deposit::getAmount() const {
+double Deposit::getAmount() const {
     return amount;
 }
 
