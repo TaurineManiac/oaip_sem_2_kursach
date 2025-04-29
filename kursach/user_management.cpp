@@ -133,6 +133,13 @@ bool BankSystem::isUsernameTaken(string login) {
 
 // Удаление пользователя (только для администратора)
 void BankSystem::deleteUser() {
+    for (int i = 0; i < countUsers; i++) {
+        cout <<i+1 << ")" <<users[i]->getUsername() << " " ;
+        cout << users[i]->getName()<< " " ;
+        cout << users[i]->getSurname() << endl;
+
+    }
+
     if (!currentUser->isAdmin()) {
         cout << "Ошибка: удаление пользователей доступно только администратору.\n";
         return;
@@ -187,4 +194,13 @@ void BankSystem::deleteUser() {
     saveDeposits();
     saveUsers();
     cout << "Пользователь и его вклады удалены.\n";
+}
+
+void BankSystem::showUsers() {
+    for (int i = 0; i < countUsers; i++) {
+        cout <<i+1 << ")" <<users[i]->getUsername() << " " ;
+        cout << users[i]->getName()<< " " ;
+        cout << users[i]->getSurname() << endl;
+
+    }
 }

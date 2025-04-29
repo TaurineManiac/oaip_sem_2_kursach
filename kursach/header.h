@@ -83,6 +83,7 @@ public:
     void deleteUser();
     void loadUsers();
     void saveUsers();
+    void showUsers();
 
     // Методы управления вкладами
     void loadDeposits();
@@ -113,6 +114,7 @@ public:
     void subAdminSearchMenu();
     void subAdminSortMenu();
     void subAdminFilterMenu();
+    void subAdminShowMenu();
     //user
     void userMenu();
     void subUserSearchMenu();
