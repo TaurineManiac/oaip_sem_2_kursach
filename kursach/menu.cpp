@@ -7,6 +7,7 @@
 // Меню администратора
 void BankSystem::adminMenu() {
     while (true) {
+
         std::cout << "\nМеню администратора:\n";
         std::cout << "1. Добавить вклад\n";
         std::cout << "2. Редактировать вклад\n";
@@ -153,6 +154,7 @@ void BankSystem::subAdminShowMenu() {
 // Меню пользователя
 void BankSystem::userMenu() {
     while (true) {
+
         std::cout << "\nМеню пользователя:\n";
         std::cout << "1. Добавить вклад\n";
         std::cout << "2. Редактировать вклад\n";

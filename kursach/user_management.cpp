@@ -171,6 +171,14 @@ void BankSystem::deleteUser() {
         return;
     }
 
+    cout << "Вы уверены что хотите удалить пользователя?" << endl;
+    cout << "1- Да\n"
+            "2- Нет" << endl;
+    int choiceTryToDelete=mylib::checkYourSolution(2);
+    if (choiceTryToDelete == 2) {
+        return;
+    }
+
     int i = 0;
     while (i < depositsCount) {
         if (deposits[i].getSurname() == users[userIndex]->getSurname() &&
