@@ -68,9 +68,9 @@ void BankSystem::saveUsers() {
 // Авторизация пользователя
 bool BankSystem::logIn() {
     cout << "Введите логин: ";
-    string login = mylib::checkTryToInputString(false); // Только латиница
+    string login = mylib::checkTryToInputStringName("");
     cout << "Введите пароль: ";
-    string pass = mylib::checkTryToInputString(false); // Только латиница
+    string pass = mylib::checkTryToInputPassword("");
 
     for (int i = 0; i < countUsers; i++) {
         if (users[i]->getUsername() == login && users[i]->getPassword() == pass) {
@@ -90,7 +90,7 @@ void BankSystem::registerUser() {
     string login;
     cout << "Введите логин: ";
     while (true) {
-        login = mylib::checkTryToInputString(false); // Только латиница
+        login = mylib::checkTryToInputStringName("");
         if (isUsernameTaken(login)) {
             cout << "Данное имя пользователя уже занято. Попробуйте другое." << endl;
             continue;
@@ -99,13 +99,13 @@ void BankSystem::registerUser() {
     }
 
     cout << "Введите пароль: ";
-    string pass = mylib::checkTryToInputString(false); // Только латиница
+    string pass = mylib::checkTryToInputPassword("");
 
     cout << "Введите имя: ";
-    string name = mylib::checkTryToInputString(true); // Разрешаем кириллицу
+    string name = mylib::checkTryToInputStringName("");
 
     cout << "Введите фамилию: ";
-    string surname = mylib::checkTryToInputString(true); // Разрешаем кириллицу
+    string surname = mylib::checkTryToInputStringName("");
 
     if (countUsers == userCapacity) {
         users = expandUsers(users, userCapacity);
@@ -151,7 +151,7 @@ void BankSystem::deleteUser() {
     }
 
     cout << "Введите логин пользователя для удаления: ";
-    string username = mylib::checkTryToInputString(false); // Только латиница
+    string username = mylib::checkTryToInputStringName("");
 
     if (username == "admin") {
         cout << "Нельзя удалить администратора!\n";
@@ -212,3 +212,10 @@ void BankSystem::showUsers() {
 
     }
 }
+
+#ifndef USER_MANAGEMENT_H
+#define USER_MANAGEMENT_H
+
+#include "header.h"
+
+#endif // USER_MANAGEMENT_H

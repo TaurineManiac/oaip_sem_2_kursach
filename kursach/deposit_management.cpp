@@ -22,7 +22,7 @@ void BankSystem::loadDeposits() {
     }
 
     std::string s, n;
-    double a; // Изменено с float на double
+    double a;
     int d, m, y, id;
     // Получение текущей даты
     std::string currentDate = generate::generateCurrentDataTime(); // Формат: YYYY-MM-DD HH:MM:SS
@@ -43,7 +43,7 @@ void BankSystem::loadDeposits() {
         if (y == currentYear) {
             int currentMonth = std::stoi(currentDate.substr(5, 2));
             if (m > currentMonth) {
-                std::cout << "Пропущен некorректный вклад: " << s << " " << n << ", дата: " << d << "." << m << "." << y << "\n";
+                std::cout << "Пропущен некорректный вклад: " << s << " " << n << ", дата: " << d << "." << m << "." << y << "\n";
                 continue;
             }
             if (m == currentMonth) {
@@ -69,7 +69,7 @@ void BankSystem::saveDeposits() {
     if (!file.is_open()) {
         return;
     }
-    file << std::fixed << std::setprecision(6); // Устанавливаем точность для double
+    file << std::fixed << std::setprecision(6);
     for (int i = 0; i < depositsCount; i++) {
         file << deposits[i].getSurname() << " " << deposits[i].getName() << " "
              << deposits[i].getAmount() << " " << deposits[i].getDay() << " "
@@ -86,7 +86,7 @@ void BankSystem::showDeposits() {
         return;
     }
     std::cout << "Список вкладов:\n";
-    std::cout << std::fixed << std::setprecision(6); // Устанавливаем точность для double
+    std::cout << std::fixed << std::setprecision(6);
     for (int i = 0; i < depositsCount; i++) {
         if (!currentUser->isAdmin() && (deposits[i].getSurname() != currentUser->getSurname() ||
                                         deposits[i].getName() != currentUser->getName())) {
@@ -121,15 +121,15 @@ void BankSystem::addDeposit() {
     std::string s, n;
     if (currentUser->isAdmin()) {
         std::cout << "Введите фамилию: ";
-        s = mylib::checkTryToInputString(true); // Разрешаем кириллицу
+        s = mylib::checkTryToInputStringName("");
         std::cout << "Введите имя: ";
-        n = mylib::checkTryToInputString(true); // Разрешаем кириллицу
+        n = mylib::checkTryToInputStringName("");
     } else {
         s = currentUser->getSurname();
         n = currentUser->getName();
     }
 
-    double a; // Изменено с float на double
+    double a;
     std::cout << "Введите сумму вклада: ";
     while (true) {
         a = mylib::checkTryToInputDouble();
@@ -266,7 +266,7 @@ void BankSystem::editDeposit() {
         return;
     }
 
-    double newAmount; // Изменено с float на double
+    double newAmount;
     int newDay, newMonth, newYear;
     std::string newSurname = deposits[index].getSurname();
     std::string newName = deposits[index].getName();
@@ -374,3 +374,10 @@ void BankSystem::deleteDeposit() {
     saveDeposits();
     std::cout << "Вклад удалён!\n";
 }
+
+#ifndef DEPOSIT_MANAGEMENT_H
+#define DEPOSIT_MANAGEMENT_H
+
+#include "header.h"
+
+#endif // DEPOSIT_MANAGEMENT_H

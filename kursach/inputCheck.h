@@ -17,7 +17,9 @@ namespace mylib {
     DLL_EXPORT int checkTryToInputChar();
     DLL_EXPORT std::string trimInput(const std::string& input);
     DLL_EXPORT std::string checkTryToInputString(bool allowCyrillic = false); // Новая функция для ввода строк
-
+    DLL_EXPORT bool isDashHere(const std::string& s);
+    DLL_EXPORT std::string checkTryToInputStringName(const std::string& s);
+    DLL_EXPORT std::string checkTryToInputPassword(const std::string& s);
 }
 
 #endif // INPUTCHECK_INPUTCHECK_H

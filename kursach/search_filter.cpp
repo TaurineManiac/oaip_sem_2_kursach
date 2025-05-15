@@ -19,11 +19,11 @@ void BankSystem::searchBySurname() {
     }
 
     std::cout << "Введите фамилию для поиска: ";
-    std::string surname = mylib::checkTryToInputString(true); // Разрешаем кириллицу
+    std::string surname = mylib::checkTryToInputStringName("");
 
     bool found = false;
     std::cout << "Найденные вклады:\n";
-    std::cout << std::fixed << std::setprecision(6); // Устанавливаем точность
+    std::cout << std::fixed << std::setprecision(6);
     for (int i = 0; i < depositsCount; i++) {
         std::string depositSurname = deposits[i].getSurname();
         if (depositSurname == surname) {
@@ -79,7 +79,7 @@ void BankSystem::searchByID() {
     }
 
     std::cout << "Найден вклад:\n";
-    std::cout << std::fixed << std::setprecision(6); // Устанавливаем точность
+    std::cout << std::fixed << std::setprecision(6);
     std::cout << "ID: " << deposits[index].getDepositId() << " | "
               << deposits[index].getSurname() << " " << deposits[index].getName() << ", "
               << deposits[index].getAmount() << " руб., дата: " << deposits[index].getDay() << "."
@@ -102,7 +102,7 @@ void BankSystem::searchByAmount() {
 
     bool found = false;
     std::cout << "Найденные вклады:\n";
-    std::cout << std::fixed << std::setprecision(6); // Устанавливаем точность
+    std::cout << std::fixed << std::setprecision(6);
     for (int i = 0; i < depositsCount; i++) {
         if (!currentUser->isAdmin() &&
             (deposits[i].getSurname() != currentUser->getSurname() ||
@@ -176,7 +176,7 @@ void BankSystem::searchByDate() {
 
     bool found = false;
     std::cout << "Найденные вклады:\n";
-    std::cout << std::fixed << std::setprecision(6); // Устанавливаем точность
+    std::cout << std::fixed << std::setprecision(6);
     for (int i = 0; i < depositsCount; i++) {
         if (!currentUser->isAdmin() &&
             (deposits[i].getSurname() != currentUser->getSurname() ||
@@ -222,7 +222,7 @@ void BankSystem::filterByAmount() {
 
     bool found = false;
     std::cout << "Вклады в диапазоне от " << minAmount << " до " << maxAmount << " руб.:\n";
-    std::cout << std::fixed << std::setprecision(6); // Устанавливаем точность
+    std::cout << std::fixed << std::setprecision(6);
     for (int i = 0; i < depositsCount; i++) {
         if (!currentUser->isAdmin() &&
             (deposits[i].getSurname() != currentUser->getSurname() ||
@@ -343,7 +343,7 @@ void BankSystem::filterByDate() {
     bool found = false;
     std::cout << "Вклады в диапазоне дат от " << startDay << "." << startMonth << "." << startYear
               << " до " << endDay << "." << endMonth << "." << endYear << ":\n";
-    std::cout << std::fixed << std::setprecision(6); // Устанавливаем точность
+    std::cout << std::fixed << std::setprecision(6);
     for (int i = 0; i < depositsCount; i++) {
         if (!currentUser->isAdmin() &&
             (deposits[i].getSurname() != currentUser->getSurname() ||
@@ -396,7 +396,7 @@ void BankSystem::showNewThisMonth() {
 
     bool found = false;
     std::cout << "Вклады за " << currentMonth << "/" << currentYear << ":\n";
-    std::cout << std::fixed << std::setprecision(6); // Устанавливаем точность
+    std::cout << std::fixed << std::setprecision(6);
     for (int i = 0; i < depositsCount; i++) {
         if (!currentUser->isAdmin() &&
             (deposits[i].getSurname() != currentUser->getSurname() ||
@@ -416,3 +416,10 @@ void BankSystem::showNewThisMonth() {
         std::cout << "Вклады за этот месяц не найдены.\n";
     }
 }
+
+#ifndef SEARCH_FILTER_H
+#define SEARCH_FILTER_H
+
+#include "header.h"
+
+#endif // SEARCH_FILTER_H
