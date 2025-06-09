@@ -3,7 +3,7 @@
 #include <fstream>
 #include <limits>
 #include <cctype>
-#include "header.h"
+#include "header.h" // Оставляем только этот заголовок
 
 using namespace std;
 
@@ -140,8 +140,7 @@ void BankSystem::sortByDate() {
     }
 
     if (currentUser->isAdmin()) {
-        for (int k=0; k<depositsCount - 1; k++) {
-            for (int i = 0; i < depositsCount - 1; i++) {
+        for (int i = 0; i < depositsCount - 1; i++) {
             for (int j = 0; j < depositsCount - i - 1; j++) {
                 if (deposits[j].getYear() > deposits[j + 1].getYear() ||
                     (deposits[j].getYear() == deposits[j + 1].getYear() &&
@@ -155,8 +154,6 @@ void BankSystem::sortByDate() {
                 }
             }
         }
-        }
-
         cout << "Вклады отсортированы по дате.\n";
         showDeposits();
         saveDeposits();

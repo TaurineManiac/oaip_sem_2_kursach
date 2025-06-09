@@ -3,8 +3,6 @@
 
 #include <iostream>
 #include <string>
-#include "inputCheck.h"
-#include "generate.h"
 
 using namespace std;
 
@@ -16,17 +14,17 @@ class Deposit {
 private:
     string surname;
     string name;
-    double amount;
+    float amount;
     int day;
     int month;
     int year;
     int depositID;
 
 public:
-    Deposit(string s = "", string n = "", double a = 0, int d = 1, int m = 1, int y = 2025, int id = 0);
+    Deposit(string s = "", string n = "", float a = 0, int d = 1, int m = 1, int y = 2025, int id = 0);
     string getSurname() const;
     string getName() const;
-    double getAmount() const;
+    float getAmount() const;
     int getDay() const;
     int getMonth() const;
     int getYear() const;
@@ -83,7 +81,6 @@ public:
     void deleteUser();
     void loadUsers();
     void saveUsers();
-    void showUsers();
 
     // Методы управления вкладами
     void loadDeposits();
@@ -99,7 +96,6 @@ public:
     void searchByAmount();
     void searchByDate();
     void filterByAmount();
-    void filterByDate();
     void showNewThisMonth();
 
     // Методы сортировки
@@ -109,25 +105,9 @@ public:
     void sortByDate();
 
     // Методы меню
-    //admin
     void adminMenu();
-    void subAdminSearchMenu();
-    void subAdminSortMenu();
-    void subAdminFilterMenu();
-    void subAdminShowMenu();
-    //user
     void userMenu();
-    void subUserSearchMenu();
-    void subUserSortMenu();
-    void subUserFilterMenu();
     void start();
-
-    // Новый метод для проверки депозита
-    bool isOtherUserDeposit(int depositIndex) const;
 };
-
-// Объявления функций расширения массивов
-User** expandUsers(User** oldUsers, int& capacity);
-Deposit* expandDeposits(Deposit* oldDeposits, int& capacity);
 
 #endif // KURSACH_HEADER_H

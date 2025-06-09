@@ -1,22 +1,25 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <limits>
+#include <stdexcept>
 #include <cctype>
+#include "header.h" // Оставляем только этот заголовок
+
+#ifdef _WIN32
 #include <windows.h>
-#include "header.h"
+#endif
 
 using namespace std;
 
 int main() {
+#ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
-    try {
-        BankSystem bank;
-        bank.start();
-    } catch (const std::exception& e) {
-        cout << "Ошибка: " << e.what() << endl;
-        return 1;
-    }
+#else
+    cout << "\033[1;1H";
+#endif
+
+    BankSystem bank;
+    bank.start();
     return 0;
 }
