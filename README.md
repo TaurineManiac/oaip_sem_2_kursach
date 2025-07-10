@@ -89,7 +89,7 @@ I moved it [here](./ListOfFunctions.md).
 ## Link to the full report:
 If you want to know more about my coursework, 
 without reading code, you can read my 
-[report]((https://github.com/TaurineManiac/oaip_sem_2_kursach/blob/main/%D0%97%D0%B0%D0%BF%D0%B8%D1%81%D0%BA%D0%B0%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%BA%D0%B0%20%D0%B1%D0%B0%D0%BD%D0%BA%20YTTTTTTTTTTTTTTTTTTTTTTTTTTTTTN.docx))
+[report](https://github.com/TaurineManiac/oaip_sem_2_kursach/blob/main/%D0%97%D0%B0%D0%BF%D0%B8%D1%81%D0%BA%D0%B0%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%BA%D0%B0%20%D0%B1%D0%B0%D0%BD%D0%BA%20YTTTTTTTTTTTTTTTTTTTTTTTTTTTTTN.docx)
 , but only on RU.
 
 ## Lessons Learned:
