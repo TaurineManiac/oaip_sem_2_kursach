@@ -84,7 +84,7 @@ library, and not all methods are used by their intended purpose.
 
 ## List of Functions:
 In order not to clutter it up,
-I moved it [here](./ListOfFunction.md).
+I moved it [here](./ListOfFunctions.md).
 
 ## Link to the full report:
 If you want to know more about my coursework, 
