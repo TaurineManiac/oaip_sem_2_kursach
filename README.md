@@ -53,7 +53,7 @@ library, and not all methods are used by their intended purpose.
 | 2 | "Зарегистрироваться" | Register new account             |
 | 3 | "Выход"              | Stop program                     |
 
-### 2d level of Admin menu:\
+### 2d level of Admin menu:
 | №  | Menu option             | Description |
 |----|-------------------------|-------------|
 | 1  | "Добавить вклад"        | Create new banking deposit |
